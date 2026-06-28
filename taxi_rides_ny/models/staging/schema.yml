@@ -2,7 +2,7 @@ models:
   - name: stg_green_tripdata
     description: >
       Staging model for green taxi trip data. This model standardizes column names
-      and data types from the raw green_tripdata source, providing a clean foundation
+      and data types from the raw green_tripdata_partitioned_clustered source, providing a clean foundation
       for downstream transformations.
     columns:
       - name: vendor_id
@@ -51,7 +51,7 @@ models:
   - name: stg_yellow_tripdata
     description: >
       Staging model for yellow taxi trip data. This model standardizes column names
-      and data types from the raw yellow_tripdata source, providing a clean foundation
+      and data types from the raw yellow_tripdata_partitioned_clustered source, providing a clean foundation
       for downstream transformations.
     columns:
       - name: vendor_id
