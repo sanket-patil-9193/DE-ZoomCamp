@@ -1,9 +1,9 @@
 sources:
-  - name: raw
+  - name: staging
     description: Raw taxi trip data from NYC TLC
     database: |
       {%- if target.type == 'bigquery' -%}
-        {{ env_var('GCP_PROJECT_ID', 'please-add-your-gcp-project-id-here') }}
+        {{ env_var('GCP_PROJECT_ID', 'project-43e30e16-f1f1-4f37-9d6') }}
       {%- else -%}
         taxi_rides_ny
       {%- endif -%}
@@ -14,7 +14,7 @@ sources:
         prod
       {%- endif -%}
     tables:
-      - name: green_tripdata
+      - name: green_tripdata_partitioned_clustered
         description: Raw green taxi trip records
         columns:
           - name: vendorid
@@ -58,7 +58,7 @@ sources:
 
         config:
           loaded_at_field: lpep_pickup_datetime
-      - name: yellow_tripdata
+      - name: yellow_tripdata_partitioned_clustered
         description: Raw yellow taxi trip records
         columns:
           - name: vendorid
