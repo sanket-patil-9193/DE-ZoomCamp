@@ -29,11 +29,3 @@ vars:
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 models:
   taxi_rides_ny:
-    staging:
-      +materialized: view
-    intermediate:
-      +materialized: table
-    marts:
-      +materialized: table
-flags:
-  require_generic_test_arguments_property: true
