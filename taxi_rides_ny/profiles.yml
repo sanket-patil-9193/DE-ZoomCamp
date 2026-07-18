@@ -1,0 +1,82 @@
+user:
+  outputs:
+    default:
+      keyfile_json:
+        auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+        auth_uri: https://accounts.google.com/o/oauth2/auth
+        client_email: tsnake-python-service-account@project-43e30e16-f1f1-4f37-9d6.iam.gserviceaccount.com
+        client_id: '116175880285365754744'
+        client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/tsnake-python-service-account%40project-43e30e16-f1f1-4f37-9d6.iam.gserviceaccount.com
+        private_key: '-----BEGIN PRIVATE KEY-----
+
+          MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDb45X4VOSgwjyI
+
+          y+vkgjjIbn9pjOvaCOtWHSF45qwQbvXeX/YweF4sCO+sp3HcS+nek8DHSNZMVJMN
+
+          Y1zYaJXTttx9akMI4cd7W7c5l4vs+rqRYl5Hvv0xkXQ05KvSe1cc9FEaSSDFfDeV
+
+          rLrGZ0yLErEUpNt1J1NKzaxCREN1uBlRUqSQ8kW4zZHVedAQdbTEJg6x5rW3Xuu3
+
+          IXDDV6rfDmy4yK2R8aPWZuxR9DuADfzqHxsV0T8pIvOFiuBx2QFcPA8LQZOp0kkj
+
+          OchQdbik+YZ8H8H/hA3AIx+Lkco1HQpWIJo3YzWVVH/RGEdukP3yrNCaVUbXeEv2
+
+          ngoy+5zBAgMBAAECggEAA0PhYw3LqVFzuapMMe6hw47UfdpAWaf+lUmbHiL6v3G5
+
+          B+4lMeS6V+1itbh0zzXMtBKTRGz3SwHfKc3lv+GUW/pKqDgZj7pejnKMXs1lIAXn
+
+          Gv06yNZJXIuRjgQumFJe4Z4FIvP0CcqwPpzmgcdgkm4ayrjZ+Lw2lz/vmg+jxXiJ
+
+          JmKQ1eXnZWYJc2qm4TzkM+HQ43bsQLogzT2KFXDFralWFcCM32e0Oh05Cw/Qgd2C
+
+          JlmieisES4qYT47A2D6Frvag5uqWWoD+PP3YN930OuGP3vuT5vhyA/9c4Dh5dgzn
+
+          4p6lst6VtGsysY+QGJ31RgmjbMHiKDCU/wupkQDoOQKBgQD3D6okZ9mCgtddGWWF
+
+          KQAD4RdZXMw+4hCPt/8NVIQLbvQvtx0Fe8srbm3mKzDR6zVMBLPJ9XPci+UIekf4
+
+          n0Y/o4NRqoXkqNvYGmJ5871NE4lt9RmDfYS6FWzpexjpJCHEfZvOlSp2EKAQdVc6
+
+          13dlS4Qj6cs+1GaaNdB3OFy7VQKBgQDj2D8Wa6GmrVICXwRjInHvpGaWIUlc7STr
+
+          h52tfT6+fwyVBS+t4rO98gEMvZ8BJMeAIs/7dwtSEe/1ygy9u9qMBHz5H83lK3yr
+
+          WZQKFizixu/2tm6qN7kudYSobdqDittIxswtDHd31X1LbTlQPJfv5uLXo7MihJAL
+
+          jdwDTiYTvQKBgFxWYHLG1YZvvGoxSb4g+r54bC+b/UIrX6E3VX337noPd/g1agVY
+
+          pTCQT0bNMavjSsIkp8V9lVYCexFWEnwbmzfBtxzYrL4vVitIgTGvJTsfaCfOiUCZ
+
+          sveRdmk09rR8Kpqzj34ARiRmRkygbn+xdBBJzxNVF/9dhxNvtYA5cn8ZAoGAQ+wG
+
+          OpfRc8+9X+mVdDwjfQ4kauL3bNVhKTmffsWUe9OCG7aVFSA89wX63CJ3ES82rfMy
+
+          z0MYw9mHEF2wWKt0pkL8QoQBrCy/mJE2uZ8MuHoXtRODgAjmknwEFPXSq14sqtBg
+
+          s5lA0B97n42rBUla/fB1dVVepI6iJl+e0/lrDn0CgYBR+2MwYBbhC1cXvonD46cT
+
+          NipMVuZMcGf1umd2JIOArVdSr+7o7j9F18XpEbP0S//B49fdMg9ssjDgxwwOhQsF
+
+          sObVD7PjVVJWaPCGi7m3IxYMr9U5e1ApW9pkYYAekawcChJ0kyd1ARZqs03CRc+k
+
+          cnJYNDEpMI2Pai+p1BEMtg==
+
+          -----END PRIVATE KEY-----
+
+          '
+        private_key_id: 1a060f7f232a9f8d22053fc27fe48dca7228d780
+        project_id: project-43e30e16-f1f1-4f37-9d6
+        token_uri: https://oauth2.googleapis.com/token
+        type: service_account
+      method: service-account-json
+      project: project-43e30e16-f1f1-4f37-9d6
+      schema: taxi_ride_ny
+      scopes:
+      - https://www.googleapis.com/auth/bigquery
+      - https://www.googleapis.com/auth/cloud-platform
+      - https://www.googleapis.com/auth/drive
+      - https://www.googleapis.com/auth/userinfo.email
+      target_name: default
+      threads: 4
+      type: bigquery
+  target: default
