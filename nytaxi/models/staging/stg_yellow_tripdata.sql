@@ -27,7 +27,8 @@ renamed as (
         cast(tolls_amount as numeric) as tolls_amount,
         cast(improvement_surcharge as numeric) as improvement_surcharge,
         cast(total_amount as numeric) as total_amount,
-        cast(payment_type as integer) as payment_type
+        cast(payment_type as integer) as payment_type,
+        {{ get_payment_type_desc (payment_type) }} as payment_type_description
 
     from source
     -- Filter out records with null vendor_id (data quality requirement)
