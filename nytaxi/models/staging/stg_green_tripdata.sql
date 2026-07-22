@@ -5,6 +5,7 @@ with source as (
 renamed as (
     select
         -- identifiers
+        {{ dbt_utils.generate_surrogate_key(['vendorid','lpep_pickup_datetime']) }} as tripid,
         cast(vendorid as integer) as vendor_id,
         {{ safe_cast('ratecodeid', 'integer') }} as rate_code_id,
         cast(pulocationid as integer) as pickup_location_id,
@@ -30,7 +31,7 @@ renamed as (
         cast(improvement_surcharge as numeric) as improvement_surcharge,
         cast(total_amount as numeric) as total_amount,
         {{ safe_cast('payment_type', 'integer') }} as payment_type,
-        {{ get_payment_type_desc (payment_type) }} as payment_type_description
+        {{ get_payment_type_desc ('payment_type') }} as payment_type_description
     from source
     -- Filter out records with null vendor_id (data quality requirement)
     where vendorid is not null
@@ -42,3 +43,11 @@ select * from renamed
 {% if target.name == 'dev' %}
 where pickup_datetime >= '2019-01-01' and pickup_datetime < '2019-02-01'
 {% endif %}
+
+
+-- dbt build -select <model_name> --vars '{'is_test_run':'false'}'
+{% if var('is_test_run',default=true) %}
+
+    limit 100
+
+{% endif%}

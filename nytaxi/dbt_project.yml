@@ -28,4 +28,3 @@ vars:
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 models:
-  nytaxi:
